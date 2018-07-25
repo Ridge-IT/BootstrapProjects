@@ -1,0 +1,112 @@
+<!-- <?php
+if (isset($_POST["submit"])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $birthdate = $_POST['birthdate'];
+    $from = 'TechHub form';
+    $to = 'siya@ridgeweb.co.za';
+    $subject = 'Message from '. $name;
+    $headers = 'From: Tech Hub Contact Form <'.$email.'>' . "\r\n" . 'Reply-To: ' . $email;
+
+    $body = "From: $name\n E-Mail: $email\n Password: $password\n Birthdate:\n $birthdate";
+
+// If there are no errors, send the email
+if (!$errName && !$errEmail && !$password && !$errBirthDate) {
+if (mail($to, $subject, $body, $headers)) {
+    $result='<div class="alert alert-success">Thank You for your inquiry, we will respond as soon as possible</div>';
+} else {
+    $result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later</div>';
+} 
+}
+}         
+?> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" type="text/css" href="CSS/CSS_Reset.css">
+    <link rel="stylesheet" type="text/css" href="CSS/master.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+
+    <meta charset="utf-8" />
+
+    <!-- Javascript -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <!-- <script src="JS/contact_me.min.js"></script> -->
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+  <!-- <script src="JS/contact_me.js"></script> -->
+
+<title>Contact Us</title>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="#">Tech Hub</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">signup <span class="sr-only">(current)</span></a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+      </nav>
+      <!-- End navbar -->
+<div class="container form-cont">
+      <form class="form-contact bg-white" method="POST" action="index.php" id="contactForm" role="form">
+          <div class="text-center mb-4">
+            <h1 class="h2 mb-3 font-weight-bold body-heading">Sign Up</h1>
+            <p>Lorem ipsum dolor sit amet</p>
+          </div>
+    
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="form-label-group">
+                  <input type="name" id="inputName" class="form-control bg-light" name="name" placeholder="Name" required="required" autofocus="">
+                  
+                </div>
+              </div>
+              <br><br>
+              <div class="col-sm-6">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail" class="form-control bg-light" name="email" placeholder="Email address" required="required" autofocus="">
+                
+              </div>
+            </div>
+          </div>
+    <br>
+          <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control bg-light" name="password" placeholder="Password" required="required">
+
+          </div>
+          <br>
+          <div class="datepicker">
+            <div class="input-group">
+              <input type="date" class="form-control datepicker bg-light dateclass placeholderclass" name="birthdate" onclick="$(this).removeClass('placeholderclass')" name="date" placeholder="Date of birth" required="required">
+              <div class="input-group-append">
+                    <div id="success"></div>
+                <button type="submit" class="btn btn-outline-secondary docs-datepicker-trigger datebtn" id="sendMessageButton" name="submit" disabled="">
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+            <div class="datepicker"></div>
+          </div>
+          
+          <br>
+          <button class="btn btn-lg btn-primary btn-block signup" id="register" type="submit">Sign Up</button>
+        </form>
+      </form>
+    </div>
+  </body>
+</html>

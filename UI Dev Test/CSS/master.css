@@ -1,0 +1,72 @@
+body{
+  color:#999 !important;
+  overflow-y: hidden;
+}
+.navbar{
+  padding:20px 0px !important;
+  border-bottom:1px solid #99999926;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 3px 15px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 15px -7px rgba(0, 0, 0, 0.384);
+  box-shadow: 0px 3px 16px -7px rgba(0,0,0,0.75);
+}
+.navbar-brand{
+  font-size:22px !important;
+  font-weight: 800;
+  color: #3f9f8f !important;
+  letter-spacing: 0.3rem; 
+  text-transform: uppercase;
+}
+.navbar-nav{
+  font-weight: 400;
+}
+.navbar-nav a{
+  color: #3f9f8f !important;
+}
+.form-contact{
+    width: 100%;
+    max-width: 500px;
+    padding: 100px;
+    margin: auto;
+}
+.body-heading{
+  color:#3f9f8f !important;
+}
+.signup{
+  background-color: #3f9f8f !important;
+  border:2px solid #3f9f8f !important;
+  border-radius: 50px !important;
+  transition:0.3s ease-in-out !important;
+}
+ .signup:hover{
+  background-color: rgba(255, 0, 0, 0) !important;
+  color: #3f9f8f !important;
+  border-radius: 3px !important;
+}
+.form-contact{
+  -webkit-box-shadow: 0px 4px 15px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 15px -7px rgba(0, 0, 0, 0.384);
+  box-shadow: 0px 4px 25px -6px rgba(0,0,0,0.75);
+  border: 1px solid #b6b6b685 !important;
+  padding: 80px;
+}
+.form-cont{
+  margin: 40px auto !important;
+}
+.navbar-toggler-icon{
+  color: #3f9f8f !important;
+}
+.datebtn{
+  background: #3f9f8f !important;
+}
+.fa-calendar{
+  color: #f7f7f7 !important;
+}
+.dateclass.placeholderclass::before{
+  width: 100% !important;
+  content: attr(placeholder);
+}
+.dateclass.placeholderclass:hover::before{
+  width: 0% !important;
+  content: "" !important;
+}
